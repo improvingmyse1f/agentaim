@@ -1,4 +1,12 @@
 .build/
 .swiftpm/
+.swift-module-cache/
 dist/
 .DS_Store
+
+# 本地 agent 工作目录：含 .workbuddy/backup/ 下对本机 WorkBuddy 设置的备份
+# （里面有用户自己的配置）以及本地会话记忆。仓库要公开，这些一律不进版本库。
+.workbuddy/
+
+# Rust 侧（port/）的构建产物
+port/target/

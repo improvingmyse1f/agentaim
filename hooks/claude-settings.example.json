@@ -1,0 +1,40 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "PreToolUse": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "PermissionRequest": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "PostToolUse": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "PostToolUseFailure": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "Elicitation": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "ElicitationResult": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|idle_prompt",
+        "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }]
+      }
+    ],
+    "Stop": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "StopFailure": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ],
+    "SessionEnd": [
+      { "hooks": [{ "type": "command", "command": "\"/ABSOLUTE/PATH/TO/AgentAim.app/Contents/MacOS/AgentAimHook\" --provider claude", "timeout": 1 }] }
+    ]
+  }
+}

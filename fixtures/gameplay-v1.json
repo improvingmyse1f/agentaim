@@ -1,0 +1,1825 @@
+{
+  "cases" : [
+    {
+      "capacity" : 3,
+      "expected" : {
+        "finalTargets" : [
+          {
+            "center" : {
+              "x" : 894.4389777704025,
+              "y" : 363.3838134963746
+            },
+            "diameter" : 31.67084970662364,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 1124.6547222784352,
+              "y" : 549.4902917215609
+            },
+            "diameter" : 33.19780589553711,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 592.563430372687,
+              "y" : 391.4174227106836
+            },
+            "diameter" : 35.649382824910994,
+            "index" : 2
+          }
+        ],
+        "initialTargets" : [
+          {
+            "center" : {
+              "x" : 1094.1748301375712,
+              "y" : 394.7195236509018
+            },
+            "diameter" : 39.737625314654636,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 325.74404278717617,
+              "y" : 620.5640606655131
+            },
+            "diameter" : 41.25680490216529,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 762.5757709047214,
+              "y" : 565.6582525330728
+            },
+            "diameter" : 34.82282002284505,
+            "index" : 2
+          }
+        ],
+        "shotResults" : [
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 100,
+            "streak" : 1
+          },
+          {
+            "hit" : false,
+            "score" : 100,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 1,
+            "score" : 200,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 2,
+            "score" : 305,
+            "streak" : 2
+          },
+          {
+            "hit" : false,
+            "score" : 305,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 405,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 510,
+            "streak" : 2
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 620,
+            "streak" : 3
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 735,
+            "streak" : 4
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 855,
+            "streak" : 5
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 980,
+            "streak" : 6
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1110,
+            "streak" : 7
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1245,
+            "streak" : 8
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1385,
+            "streak" : 9
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1530,
+            "streak" : 10
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1680,
+            "streak" : 11
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1835,
+            "streak" : 12
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1995,
+            "streak" : 13
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2160,
+            "streak" : 14
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2330,
+            "streak" : 15
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2505,
+            "streak" : 16
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2685,
+            "streak" : 17
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2870,
+            "streak" : 18
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3060,
+            "streak" : 19
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3255,
+            "streak" : 20
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3455,
+            "streak" : 21
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3655,
+            "streak" : 22
+          }
+        ],
+        "totals" : {
+          "bestStreak" : 22,
+          "hits" : 25,
+          "score" : 3655,
+          "shots" : 27,
+          "streak" : 22
+        }
+      },
+      "name" : "screen-1470x956-standard",
+      "notes" : "基准机器尺寸，出厂参数",
+      "parameters" : {
+        "areaFactor" : 0.5,
+        "baseDiameterRange" : [
+          0.03,
+          0.04
+        ],
+        "candidateAttempts" : 24,
+        "minSpacingFloor" : 110,
+        "minSpacingRatio" : 0.1,
+        "spawnExtentFloorX" : 180,
+        "spawnExtentFloorY" : 130,
+        "spawnExtentRatioX" : 0.34,
+        "spawnExtentRatioY" : 0.28,
+        "targetScale" : 1
+      },
+      "screenHeight" : 956,
+      "screenWidth" : 1470,
+      "seed" : 20260916,
+      "shots" : [
+        {
+          "x" : 1094.1748301375712,
+          "y" : 394.7195236509018
+        },
+        {
+          "x" : 4,
+          "y" : 4
+        },
+        {
+          "x" : 325.74404278717617,
+          "y" : 620.5640606655131
+        },
+        {
+          "x" : 762.5757709047214,
+          "y" : 565.6582525330728
+        },
+        {
+          "x" : 1466,
+          "y" : 952
+        },
+        {
+          "x" : 550.2832294375753,
+          "y" : 687.9303039194253
+        },
+        {
+          "x" : 240.71966128278996,
+          "y" : 693.6927559052385
+        },
+        {
+          "x" : 310.9052088819062,
+          "y" : 467.39679568296094
+        },
+        {
+          "x" : 839.6246345360994,
+          "y" : 558.5384558000289
+        },
+        {
+          "x" : 759.3645491184859,
+          "y" : 422.04757916385034
+        },
+        {
+          "x" : 566.2872308326844,
+          "y" : 738.8331486142597
+        },
+        {
+          "x" : 1121.0957783674787,
+          "y" : 251.67784974423867
+        },
+        {
+          "x" : 398.088866437264,
+          "y" : 384.5525301642814
+        },
+        {
+          "x" : 866.115839010776,
+          "y" : 612.3356706400461
+        },
+        {
+          "x" : 965.4501135571968,
+          "y" : 214.6081431742208
+        },
+        {
+          "x" : 327.72338240338706,
+          "y" : 649.9732187345533
+        },
+        {
+          "x" : 931.9353032414836,
+          "y" : 542.1796150772904
+        },
+        {
+          "x" : 798.1139925573079,
+          "y" : 441.9530289193973
+        },
+        {
+          "x" : 771.0196134073271,
+          "y" : 721.2154004501606
+        },
+        {
+          "x" : 374.53423417068484,
+          "y" : 498.8328056319067
+        },
+        {
+          "x" : 273.5115021214573,
+          "y" : 301.3927033517035
+        },
+        {
+          "x" : 974.1897387149277,
+          "y" : 223.15393557111295
+        },
+        {
+          "x" : 811.6402258767218,
+          "y" : 477.66701661930387
+        },
+        {
+          "x" : 1219.4310980739228,
+          "y" : 244.1967210081208
+        },
+        {
+          "x" : 820.2241251075066,
+          "y" : 404.35022815192036
+        },
+        {
+          "x" : 353.2085958374238,
+          "y" : 214.06502090546974
+        },
+        {
+          "x" : 558.3963066429461,
+          "y" : 569.5643140614527
+        }
+      ]
+    },
+    {
+      "capacity" : 3,
+      "expected" : {
+        "finalTargets" : [
+          {
+            "center" : {
+              "x" : 1567.244099321606,
+              "y" : 706.6639542447697
+            },
+            "diameter" : 64.96525992222324,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 492.9863790952552,
+              "y" : 732.5152444662098
+            },
+            "diameter" : 63.282186751560346,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 485.75699828957147,
+              "y" : 1121.3839005415482
+            },
+            "diameter" : 67.22643247265486,
+            "index" : 2
+          }
+        ],
+        "initialTargets" : [
+          {
+            "center" : {
+              "x" : 1707.85688304291,
+              "y" : 1099.8166204923925
+            },
+            "diameter" : 64.56166080828658,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 1182.975991198524,
+              "y" : 931.9980376376441
+            },
+            "diameter" : 62.349561836096626,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 1320.1553466845885,
+              "y" : 547.0342030977139
+            },
+            "diameter" : 70.18750846555396,
+            "index" : 2
+          }
+        ],
+        "shotResults" : [
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 100,
+            "streak" : 1
+          },
+          {
+            "hit" : false,
+            "score" : 100,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 1,
+            "score" : 200,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 2,
+            "score" : 305,
+            "streak" : 2
+          },
+          {
+            "hit" : false,
+            "score" : 305,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 405,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 510,
+            "streak" : 2
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 620,
+            "streak" : 3
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 735,
+            "streak" : 4
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 855,
+            "streak" : 5
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 980,
+            "streak" : 6
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1110,
+            "streak" : 7
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1245,
+            "streak" : 8
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1385,
+            "streak" : 9
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1530,
+            "streak" : 10
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1680,
+            "streak" : 11
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1835,
+            "streak" : 12
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1995,
+            "streak" : 13
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2160,
+            "streak" : 14
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2330,
+            "streak" : 15
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2505,
+            "streak" : 16
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2685,
+            "streak" : 17
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2870,
+            "streak" : 18
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3060,
+            "streak" : 19
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3255,
+            "streak" : 20
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3455,
+            "streak" : 21
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3655,
+            "streak" : 22
+          }
+        ],
+        "totals" : {
+          "bestStreak" : 22,
+          "hits" : 25,
+          "score" : 3655,
+          "shots" : 27,
+          "streak" : 22
+        }
+      },
+      "name" : "screen-2560x1440-standard",
+      "notes" : "大屏：间距与出生范围都由比例决定，不再走像素下限",
+      "parameters" : {
+        "areaFactor" : 0.5,
+        "baseDiameterRange" : [
+          0.03,
+          0.04
+        ],
+        "candidateAttempts" : 24,
+        "minSpacingFloor" : 110,
+        "minSpacingRatio" : 0.1,
+        "spawnExtentFloorX" : 180,
+        "spawnExtentFloorY" : 130,
+        "spawnExtentRatioX" : 0.34,
+        "spawnExtentRatioY" : 0.28,
+        "targetScale" : 1
+      },
+      "screenHeight" : 1440,
+      "screenWidth" : 2560,
+      "seed" : 1,
+      "shots" : [
+        {
+          "x" : 1707.85688304291,
+          "y" : 1099.8166204923925
+        },
+        {
+          "x" : 4,
+          "y" : 4
+        },
+        {
+          "x" : 1182.975991198524,
+          "y" : 931.9980376376441
+        },
+        {
+          "x" : 1320.1553466845885,
+          "y" : 547.0342030977139
+        },
+        {
+          "x" : 2556,
+          "y" : 1436
+        },
+        {
+          "x" : 524.4235042278194,
+          "y" : 382.4527769883908
+        },
+        {
+          "x" : 1430.7448235595134,
+          "y" : 637.0772885744432
+        },
+        {
+          "x" : 850.497895458173,
+          "y" : 743.9963580709968
+        },
+        {
+          "x" : 1712.1280604127367,
+          "y" : 976.4622130964415
+        },
+        {
+          "x" : 821.0564191082581,
+          "y" : 845.9883307728388
+        },
+        {
+          "x" : 1870.7079566537693,
+          "y" : 578.4229567680675
+        },
+        {
+          "x" : 1965.7690632869178,
+          "y" : 1052.7933479908102
+        },
+        {
+          "x" : 2046.2547555631418,
+          "y" : 634.2491636039044
+        },
+        {
+          "x" : 1466.3521781749691,
+          "y" : 442.17705694261076
+        },
+        {
+          "x" : 1933.871067619246,
+          "y" : 741.3341021742184
+        },
+        {
+          "x" : 1663.6847906961566,
+          "y" : 542.5400859089963
+        },
+        {
+          "x" : 618.5248371299447,
+          "y" : 447.2080879497587
+        },
+        {
+          "x" : 2102.8553406914425,
+          "y" : 874.0920488755257
+        },
+        {
+          "x" : 1228.8011214717112,
+          "y" : 819.9828057758491
+        },
+        {
+          "x" : 1812.249752398027,
+          "y" : 404.73666533959175
+        },
+        {
+          "x" : 793.921712685536,
+          "y" : 657.6930749243643
+        },
+        {
+          "x" : 1602.1693700074034,
+          "y" : 1075.492811311521
+        },
+        {
+          "x" : 630.2466388201926,
+          "y" : 459.5086829770667
+        },
+        {
+          "x" : 1768.148108191159,
+          "y" : 629.7702790223907
+        },
+        {
+          "x" : 2068.3920885234966,
+          "y" : 798.1716443672244
+        },
+        {
+          "x" : 1899.6542585094587,
+          "y" : 997.2439315231542
+        },
+        {
+          "x" : 946.9577372210097,
+          "y" : 910.4150992027129
+        }
+      ]
+    },
+    {
+      "capacity" : 3,
+      "expected" : {
+        "finalTargets" : [
+          {
+            "center" : {
+              "x" : 732.9964039625163,
+              "y" : 742.238992914472
+            },
+            "diameter" : 34.24602255117182,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 438.55373525651055,
+              "y" : 265.76950281325435
+            },
+            "diameter" : 32.38278012345947,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 328.5902842910276,
+              "y" : 579.1543299288205
+            },
+            "diameter" : 30.883776606048563,
+            "index" : 2
+          }
+        ],
+        "initialTargets" : [
+          {
+            "center" : {
+              "x" : 395.0464287197693,
+              "y" : 359.471901093391
+            },
+            "diameter" : 33.0578452958721,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 273.2149564728301,
+              "y" : 675.1345830599516
+            },
+            "diameter" : 29.546925665770864,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 1035.511623962818,
+              "y" : 392.3054809946161
+            },
+            "diameter" : 28.435572932813223,
+            "index" : 2
+          }
+        ],
+        "shotResults" : [
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 100,
+            "streak" : 1
+          },
+          {
+            "hit" : false,
+            "score" : 100,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 1,
+            "score" : 200,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 2,
+            "score" : 305,
+            "streak" : 2
+          },
+          {
+            "hit" : false,
+            "score" : 305,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 405,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 510,
+            "streak" : 2
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 620,
+            "streak" : 3
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 735,
+            "streak" : 4
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 855,
+            "streak" : 5
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 980,
+            "streak" : 6
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1110,
+            "streak" : 7
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1245,
+            "streak" : 8
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1385,
+            "streak" : 9
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1530,
+            "streak" : 10
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1680,
+            "streak" : 11
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1835,
+            "streak" : 12
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1995,
+            "streak" : 13
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2160,
+            "streak" : 14
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2330,
+            "streak" : 15
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2505,
+            "streak" : 16
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2685,
+            "streak" : 17
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2870,
+            "streak" : 18
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3060,
+            "streak" : 19
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3255,
+            "streak" : 20
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3455,
+            "streak" : 21
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3655,
+            "streak" : 22
+          }
+        ],
+        "totals" : {
+          "bestStreak" : 22,
+          "hits" : 25,
+          "score" : 3655,
+          "shots" : 27,
+          "streak" : 22
+        }
+      },
+      "name" : "screen-1470x956-target-scale-0.85",
+      "notes" : "靶子整体缩到 85%，验证直径公式里的倍率项",
+      "parameters" : {
+        "areaFactor" : 0.5,
+        "baseDiameterRange" : [
+          0.03,
+          0.04
+        ],
+        "candidateAttempts" : 24,
+        "minSpacingFloor" : 110,
+        "minSpacingRatio" : 0.1,
+        "spawnExtentFloorX" : 180,
+        "spawnExtentFloorY" : 130,
+        "spawnExtentRatioX" : 0.34,
+        "spawnExtentRatioY" : 0.28,
+        "targetScale" : 0.85
+      },
+      "screenHeight" : 956,
+      "screenWidth" : 1470,
+      "seed" : 42,
+      "shots" : [
+        {
+          "x" : 395.0464287197693,
+          "y" : 359.471901093391
+        },
+        {
+          "x" : 4,
+          "y" : 4
+        },
+        {
+          "x" : 273.2149564728301,
+          "y" : 675.1345830599516
+        },
+        {
+          "x" : 1035.511623962818,
+          "y" : 392.3054809946161
+        },
+        {
+          "x" : 1466,
+          "y" : 952
+        },
+        {
+          "x" : 748.3907578756205,
+          "y" : 488.71432007559065
+        },
+        {
+          "x" : 854.771107285138,
+          "y" : 250.02273181100423
+        },
+        {
+          "x" : 976.8825141484676,
+          "y" : 630.8449906358321
+        },
+        {
+          "x" : 615.0708594347848,
+          "y" : 244.06106089887209
+        },
+        {
+          "x" : 996.1006381006332,
+          "y" : 259.55543556751496
+        },
+        {
+          "x" : 1009.673209019441,
+          "y" : 568.0982198546251
+        },
+        {
+          "x" : 739.8692158069814,
+          "y" : 729.2825859583088
+        },
+        {
+          "x" : 1057.3733104066198,
+          "y" : 576.3544607742799
+        },
+        {
+          "x" : 1109.9895782818878,
+          "y" : 227.590864325847
+        },
+        {
+          "x" : 1199.616763940335,
+          "y" : 536.6282681865337
+        },
+        {
+          "x" : 560.0262509655375,
+          "y" : 543.9376906480982
+        },
+        {
+          "x" : 1159.222678740525,
+          "y" : 690.5029990847742
+        },
+        {
+          "x" : 552.7223709416792,
+          "y" : 476.0788396712252
+        },
+        {
+          "x" : 965.1969394440507,
+          "y" : 342.9858698952177
+        },
+        {
+          "x" : 1038.426643305026,
+          "y" : 599.0204857775344
+        },
+        {
+          "x" : 691.206661158787,
+          "y" : 301.4948316942272
+        },
+        {
+          "x" : 929.1404634638452,
+          "y" : 238.01293092645204
+        },
+        {
+          "x" : 1044.0855415351355,
+          "y" : 597.120709649691
+        },
+        {
+          "x" : 442.3503824930366,
+          "y" : 434.1152472574346
+        },
+        {
+          "x" : 1058.497785568407,
+          "y" : 280.0260507968334
+        },
+        {
+          "x" : 513.9930033823734,
+          "y" : 720.9249052853943
+        },
+        {
+          "x" : 618.9533454786215,
+          "y" : 345.2370397758058
+        }
+      ]
+    },
+    {
+      "capacity" : 3,
+      "expected" : {
+        "finalTargets" : [
+          {
+            "center" : {
+              "x" : 255.92928851839133,
+              "y" : 311.68615882956925
+            },
+            "diameter" : 28.59452503792873,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 391.09190149790214,
+              "y" : 435.23138815061833
+            },
+            "diameter" : 28.0914038167229,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 633.5542995454755,
+              "y" : 214.8470962605115
+            },
+            "diameter" : 27.20591721227096,
+            "index" : 2
+          }
+        ],
+        "initialTargets" : [
+          {
+            "center" : {
+              "x" : 175.53002524584565,
+              "y" : 556.3591535154085
+            },
+            "diameter" : 24.544989206070852,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 478.8843403343856,
+              "y" : 276.23550910336223
+            },
+            "diameter" : 25.943186500801108,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 832.2195169993752,
+              "y" : 563.7818631796486
+            },
+            "diameter" : 25.11066200189188,
+            "index" : 2
+          }
+        ],
+        "shotResults" : [
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 100,
+            "streak" : 1
+          },
+          {
+            "hit" : false,
+            "score" : 100,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 1,
+            "score" : 200,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 2,
+            "score" : 305,
+            "streak" : 2
+          },
+          {
+            "hit" : false,
+            "score" : 305,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 405,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 510,
+            "streak" : 2
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 620,
+            "streak" : 3
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 735,
+            "streak" : 4
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 855,
+            "streak" : 5
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 980,
+            "streak" : 6
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1110,
+            "streak" : 7
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1245,
+            "streak" : 8
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1385,
+            "streak" : 9
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1530,
+            "streak" : 10
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1680,
+            "streak" : 11
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1835,
+            "streak" : 12
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1995,
+            "streak" : 13
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2160,
+            "streak" : 14
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2330,
+            "streak" : 15
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2505,
+            "streak" : 16
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2685,
+            "streak" : 17
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2870,
+            "streak" : 18
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3060,
+            "streak" : 19
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3255,
+            "streak" : 20
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3455,
+            "streak" : 21
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3655,
+            "streak" : 22
+          }
+        ],
+        "totals" : {
+          "bestStreak" : 22,
+          "hits" : 25,
+          "score" : 3655,
+          "shots" : 27,
+          "streak" : 22
+        }
+      },
+      "name" : "screen-1024x768-spacing-floor",
+      "notes" : "屏宽 1024：屏宽×0.10 = 102.4 低于 110 下限，间距应取 110",
+      "parameters" : {
+        "areaFactor" : 0.5,
+        "baseDiameterRange" : [
+          0.03,
+          0.04
+        ],
+        "candidateAttempts" : 24,
+        "minSpacingFloor" : 110,
+        "minSpacingRatio" : 0.1,
+        "spawnExtentFloorX" : 180,
+        "spawnExtentFloorY" : 130,
+        "spawnExtentRatioX" : 0.34,
+        "spawnExtentRatioY" : 0.28,
+        "targetScale" : 1
+      },
+      "screenHeight" : 768,
+      "screenWidth" : 1024,
+      "seed" : 7,
+      "shots" : [
+        {
+          "x" : 175.53002524584565,
+          "y" : 556.3591535154085
+        },
+        {
+          "x" : 4,
+          "y" : 4
+        },
+        {
+          "x" : 478.8843403343856,
+          "y" : 276.23550910336223
+        },
+        {
+          "x" : 832.2195169993752,
+          "y" : 563.7818631796486
+        },
+        {
+          "x" : 1020,
+          "y" : 764
+        },
+        {
+          "x" : 765.4658154082788,
+          "y" : 404.76745213131085
+        },
+        {
+          "x" : 458.92128145621183,
+          "y" : 557.1242582066182
+        },
+        {
+          "x" : 217.23469257600243,
+          "y" : 344.0214985319714
+        },
+        {
+          "x" : 452.8346761492672,
+          "y" : 586.626077411205
+        },
+        {
+          "x" : 430.6583143037423,
+          "y" : 290.49599219922493
+        },
+        {
+          "x" : 815.0277085012378,
+          "y" : 259.4798497535893
+        },
+        {
+          "x" : 612.1824726977552,
+          "y" : 564.5608215467632
+        },
+        {
+          "x" : 204.54747350415033,
+          "y" : 186.21902960419683
+        },
+        {
+          "x" : 533.9115692445735,
+          "y" : 525.0249408342752
+        },
+        {
+          "x" : 415.61623004409626,
+          "y" : 196.8406346262076
+        },
+        {
+          "x" : 511.03996808127397,
+          "y" : 313.3371514623602
+        },
+        {
+          "x" : 421.8873496283443,
+          "y" : 544.9457466205133
+        },
+        {
+          "x" : 486.541120695798,
+          "y" : 323.0523132173432
+        },
+        {
+          "x" : 705.4899420768093,
+          "y" : 592.5757814664591
+        },
+        {
+          "x" : 417.4128892775604,
+          "y" : 179.73299803226755
+        },
+        {
+          "x" : 818.5598762275492,
+          "y" : 263.91253184146484
+        },
+        {
+          "x" : 531.8034221395862,
+          "y" : 473.6214809479799
+        },
+        {
+          "x" : 391.0290433854095,
+          "y" : 175.1575112436964
+        },
+        {
+          "x" : 743.3814763278158,
+          "y" : 278.0119957589821
+        },
+        {
+          "x" : 210.4446086027159,
+          "y" : 358.8626964503154
+        },
+        {
+          "x" : 648.2069379080008,
+          "y" : 414.39855463673155
+        },
+        {
+          "x" : 783.6135806256518,
+          "y" : 598.8101822695235
+        }
+      ]
+    },
+    {
+      "capacity" : 3,
+      "expected" : {
+        "finalTargets" : [
+          {
+            "center" : {
+              "x" : 307.73218336017385,
+              "y" : 126.81782647952501
+            },
+            "diameter" : 13.688295621580771,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 383.8950878738021,
+              "y" : 250.74213583850894
+            },
+            "diameter" : 12.807242596090171,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 138.0443881821597,
+              "y" : 303.6895407667642
+            },
+            "diameter" : 13.168464086584844,
+            "index" : 2
+          }
+        ],
+        "initialTargets" : [
+          {
+            "center" : {
+              "x" : 322.1056648934449,
+              "y" : 229.37341746212232
+            },
+            "diameter" : 11.00770924878095,
+            "index" : 0
+          },
+          {
+            "center" : {
+              "x" : 147.91807916133456,
+              "y" : 235.41780208918843
+            },
+            "diameter" : 10.864224536269537,
+            "index" : 1
+          },
+          {
+            "center" : {
+              "x" : 107.40595145591917,
+              "y" : 114.98653078682239
+            },
+            "diameter" : 11.08441448305826,
+            "index" : 2
+          }
+        ],
+        "shotResults" : [
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 100,
+            "streak" : 1
+          },
+          {
+            "hit" : false,
+            "score" : 100,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 1,
+            "score" : 200,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 2,
+            "score" : 305,
+            "streak" : 2
+          },
+          {
+            "hit" : false,
+            "score" : 305,
+            "streak" : 0
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 405,
+            "streak" : 1
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 510,
+            "streak" : 2
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 620,
+            "streak" : 3
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 735,
+            "streak" : 4
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 855,
+            "streak" : 5
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 980,
+            "streak" : 6
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1110,
+            "streak" : 7
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1245,
+            "streak" : 8
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1385,
+            "streak" : 9
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1530,
+            "streak" : 10
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1680,
+            "streak" : 11
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1835,
+            "streak" : 12
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 1995,
+            "streak" : 13
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2160,
+            "streak" : 14
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2330,
+            "streak" : 15
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2505,
+            "streak" : 16
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2685,
+            "streak" : 17
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 2870,
+            "streak" : 18
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3060,
+            "streak" : 19
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3255,
+            "streak" : 20
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3455,
+            "streak" : 21
+          },
+          {
+            "hit" : true,
+            "hitIndex" : 0,
+            "score" : 3655,
+            "streak" : 22
+          }
+        ],
+        "totals" : {
+          "bestStreak" : 22,
+          "hits" : 25,
+          "score" : 3655,
+          "shots" : 27,
+          "streak" : 22
+        }
+      },
+      "name" : "screen-500x400-crowded",
+      "notes" : "极端小屏：三个靶子放不下，24 次重试后接受最后一个候选点（不许卡死）",
+      "parameters" : {
+        "areaFactor" : 0.5,
+        "baseDiameterRange" : [
+          0.03,
+          0.04
+        ],
+        "candidateAttempts" : 24,
+        "minSpacingFloor" : 110,
+        "minSpacingRatio" : 0.1,
+        "spawnExtentFloorX" : 180,
+        "spawnExtentFloorY" : 130,
+        "spawnExtentRatioX" : 0.34,
+        "spawnExtentRatioY" : 0.28,
+        "targetScale" : 1
+      },
+      "screenHeight" : 400,
+      "screenWidth" : 500,
+      "seed" : 3,
+      "shots" : [
+        {
+          "x" : 322.1056648934449,
+          "y" : 229.37341746212232
+        },
+        {
+          "x" : 4,
+          "y" : 4
+        },
+        {
+          "x" : 147.91807916133456,
+          "y" : 235.41780208918843
+        },
+        {
+          "x" : 107.40595145591917,
+          "y" : 114.98653078682239
+        },
+        {
+          "x" : 496,
+          "y" : 396
+        },
+        {
+          "x" : 311.0720967904681,
+          "y" : 119.68701851393241
+        },
+        {
+          "x" : 146.32158047689228,
+          "y" : 193.09124016183046
+        },
+        {
+          "x" : 392.0331540099754,
+          "y" : 74.50857786179148
+        },
+        {
+          "x" : 264.5751739537027,
+          "y" : 178.0366992289275
+        },
+        {
+          "x" : 255.91100980957594,
+          "y" : 298.27309942524937
+        },
+        {
+          "x" : 228.96840305402714,
+          "y" : 148.79582338773648
+        },
+        {
+          "x" : 424.47959992543116,
+          "y" : 132.6815174315428
+        },
+        {
+          "x" : 129.6890583358686,
+          "y" : 167.09299269301252
+        },
+        {
+          "x" : 298.9875404892674,
+          "y" : 322.1242437289379
+        },
+        {
+          "x" : 170.84826387002155,
+          "y" : 163.7919896562923
+        },
+        {
+          "x" : 258.0371750048813,
+          "y" : 296.1397948551761
+        },
+        {
+          "x" : 278.8012728128523,
+          "y" : 78.7155093974404
+        },
+        {
+          "x" : 192.94142760326116,
+          "y" : 171.26934798000036
+        },
+        {
+          "x" : 422.48948454280566,
+          "y" : 86.79049662963055
+        },
+        {
+          "x" : 181.19829171853604,
+          "y" : 121.31513440653595
+        },
+        {
+          "x" : 340.0634148869745,
+          "y" : 89.43824964363283
+        },
+        {
+          "x" : 186.17807621873516,
+          "y" : 117.46862392271078
+        },
+        {
+          "x" : 314.63112702622163,
+          "y" : 109.15791792178612
+        },
+        {
+          "x" : 76.4322630289962,
+          "y" : 141.5178895538685
+        },
+        {
+          "x" : 235.84053290178835,
+          "y" : 85.70201493576114
+        },
+        {
+          "x" : 191.9256161628,
+          "y" : 206.35766372734523
+        },
+        {
+          "x" : 94.08596980148835,
+          "y" : 120.47584466738331
+        }
+      ]
+    }
+  ],
+  "generator" : "swift AgentAimCore",
+  "rngDrawOrder" : "每个靶子：先 1 次直径，再最多 candidateAttempts 组 (x, y)；每组候选点先抽 x 再抽 y；未命中不消耗随机数",
+  "rngKnownAnswers" : [
+    {
+      "firstOutputs" : [
+        "0xE220A8397B1DCDAF",
+        "0x6E789E6AA1B965F4",
+        "0x06C45D188009454F",
+        "0xF88BB8A8724C81EC"
+      ],
+      "seed" : 0
+    },
+    {
+      "firstOutputs" : [
+        "0x910A2DEC89025CC1",
+        "0xBEEB8DA1658EEC67",
+        "0xF893A2EEFB32555E",
+        "0x71C18690EE42C90B"
+      ],
+      "seed" : 1
+    },
+    {
+      "firstOutputs" : [
+        "0xBDD732262FEB6E95",
+        "0x28EFE333B266F103",
+        "0x47526757130F9F52",
+        "0x581CE1FF0E4AE394"
+      ],
+      "seed" : 42
+    },
+    {
+      "firstOutputs" : [
+        "0xD2AD6709886E3D64",
+        "0xDBFC4D0D91932736",
+        "0x582D3C3444F4711A",
+        "0xF817AA189C65DAAA"
+      ],
+      "seed" : 20260916
+    }
+  ],
+  "version" : 1
+}

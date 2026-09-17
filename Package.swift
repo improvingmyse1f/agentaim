@@ -5,9 +5,13 @@ let package = Package(
     name: "AgentAim",
     platforms: [.macOS(.v13)],
     products: [
-        .executable(name: "AgentAim", targets: ["AgentAim"])
+        .executable(name: "AgentAim", targets: ["AgentAim"]),
+        .executable(name: "AgentAimHook", targets: ["AgentAimHook"])
     ],
     targets: [
-        .executableTarget(name: "AgentAim")
+        .target(name: "AgentAimCore"),
+        .executableTarget(name: "AgentAim", dependencies: ["AgentAimCore"]),
+        .executableTarget(name: "AgentAimHook", dependencies: ["AgentAimCore"]),
+        .testTarget(name: "AgentAimCoreTests", dependencies: ["AgentAimCore"])
     ]
 )

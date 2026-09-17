@@ -8,6 +8,8 @@
     <string>AgentAim</string>
     <key>CFBundleExecutable</key>
     <string>AgentAim</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon.icns</string>
     <key>CFBundleIdentifier</key>
     <string>com.agentaim.prototype</string>
     <key>CFBundleInfoDictionaryVersion</key>
@@ -22,8 +24,6 @@
     <string>1</string>
     <key>LSMinimumSystemVersion</key>
     <string>13.0</string>
-    <key>LSUIElement</key>
-    <false/>
     <key>NSHighResolutionCapable</key>
     <true/>
 </dict>
