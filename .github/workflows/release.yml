@@ -11,13 +11,13 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Test and package Windows x64
         shell: pwsh
         run: |
           $version = "${{ github.ref_name }}" -replace '^v', ''
           ./scripts/package-windows.ps1 -Version $version
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: windows-release
           path: |
@@ -26,9 +26,9 @@ jobs:
           if-no-files-found: error
 
   macos:
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Test and package macOS
         run: |
           swift test
@@ -36,7 +36,7 @@ jobs:
           version="${GITHUB_REF_NAME#v}"
           ditto -c -k --sequesterRsrc --keepParent dist/AgentAim.app "dist/AgentAim-macOS-$version.zip"
           shasum -a 256 "dist/AgentAim-macOS-$version.zip" | sed 's#dist/##' > "dist/AgentAim-macOS-$version.zip.sha256"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: macos-release
           path: |
@@ -48,7 +48,7 @@ jobs:
     needs: [windows, macos]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v7
         with:
           pattern: "*-release"
           path: release

@@ -10,9 +10,11 @@ permissions:
 
 jobs:
   macos:
-    runs-on: macos-14
+    runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+      - name: Verify Swift toolchain
+        run: swift --version
       - name: Swift tests
         run: swift test
       - name: Package macOS app
@@ -26,7 +28,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Rust format
         working-directory: port
         run: cargo fmt --all --check
