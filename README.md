@@ -1,6 +1,7 @@
 # AgentAim
 
-Agent 运行等待期间使用的轻量化 macOS 瞄准小游戏原型。
+Agent 运行等待期间使用的轻量化瞄准小游戏。当前提供 macOS 13+ 与 Windows 10 22H2 /
+Windows 11 x64 两套原生外壳，靶位、命中、计分、随机数和灵敏度投影由跨端测试合同约束。
 
 ## 当前原型
 
@@ -23,6 +24,8 @@ Agent 变成等待确认、已回复或失败时，自动安全收局并返回�
 
 ## 安装
 
+### macOS
+
 ```bash
 ./scripts/package.sh
 open dist/AgentAim.app
@@ -37,6 +40,28 @@ xattr -dr com.apple.quarantine /Applications/AgentAim.app
 
 让 agent 帮忙安装的话，把 [`AGENTS.md`](AGENTS.md) 交给它即可 —— 里面有安装步骤和
 一份可以直接念给用户听的用法说明。
+
+发布版也可以安装到当前用户的 `~/Applications`：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/improvingmyse1f/agentaim/main/scripts/install.sh | zsh
+```
+
+### Windows 10 / 11 x64
+
+在 PowerShell 中运行：
+
+```powershell
+irm https://raw.githubusercontent.com/improvingmyse1f/agentaim/main/scripts/install-windows.ps1 | iex
+```
+
+Windows 版安装到 `%LOCALAPPDATA%\AgentAim`，不需要管理员权限。启动与设置入口在通知区域
+的 AgentAim 图标；开始训练后同样用 `Esc`、`Q` 或鼠标右键退出。完整说明见
+[`WINDOWS.md`](WINDOWS.md)。
+
+> 当前 GitHub Release 是未签名预览版：Windows 可能显示 SmartScreen，macOS 可能显示
+> Gatekeeper 提示。发布包附带独立 SHA-256 文件；在证书签名与双平台真机验收完成前，
+> 不把它称为正式签名版本。
 
 ### 启动之后会发生什么
 
@@ -405,6 +430,28 @@ swift run
 ./scripts/package.sh
 open dist/AgentAim.app
 ```
+
+Windows 从源码运行与打包：
+
+```powershell
+cd port
+cargo test --workspace
+cargo run --release -p agentaim-windows --bin AgentAim
+cd ..
+.\scripts\package-windows.ps1 -Version 0.1.0
+```
+
+## 跨端玩法合同
+
+- Swift 与 Rust 各自实现平台所需的核心，但共同回放 `fixtures/gameplay-v1.json`。
+- Rust 的 `agentaim-core` 不包含窗口、渲染或输入依赖；Windows 外壳位于
+  `port/agentaim-windows`。
+- Windows 使用 Raw Input 原始鼠标计数，并复现 Mac 的 VALORANT / CS2 转角与透视投影。
+- 改玩法后必须重新生成冻结向量，并同时通过 Swift 与 Rust 全量测试。
+
+## 许可证
+
+AgentAim 使用 [MIT License](LICENSE)。
 
 ## 实现路线：AppKit + Core Animation 图层
 

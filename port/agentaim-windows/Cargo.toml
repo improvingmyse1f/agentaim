@@ -1,0 +1,35 @@
+[package]
+name = "agentaim-windows"
+description = "AgentAim 的 Windows 10/11 原生外壳"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+agentaim-core = { path = "../agentaim-core" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_System_LibraryLoader",
+    "Win32_System_DataExchange",
+    "Win32_System_Registry",
+    "Win32_System_SystemServices",
+    "Win32_System_Threading",
+    "Win32_UI_Controls",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[[bin]]
+name = "AgentAim"
+path = "src/main.rs"
+
+[[bin]]
+name = "AgentAimHook"
+path = "src/bin/hook.rs"

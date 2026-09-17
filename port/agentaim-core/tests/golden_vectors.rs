@@ -10,7 +10,9 @@
 //!   然后回来跑这个测试；
 //! - 如果没人改玩法 ⇒ 说明这次移植**没抄对**，看下面打出来的字段名和差值。
 
-use agentaim_core::{AimPoint, AimTarget, ScoreBoard, SplitMix64, TargetField, TargetFieldParameters, VECTOR_VERSION};
+use agentaim_core::{
+    AimPoint, AimTarget, ScoreBoard, SplitMix64, TargetField, TargetFieldParameters, VECTOR_VERSION,
+};
 use serde::Deserialize;
 use std::path::PathBuf;
 
@@ -346,9 +348,11 @@ fn rust_core_reproduces_frozen_vectors() {
                     case.name,
                     index,
                     lhs.hit,
-                    lhs.hit_index.map_or_else(|| "None".to_string(), |v| v.to_string()),
+                    lhs.hit_index
+                        .map_or_else(|| "None".to_string(), |v| v.to_string()),
                     rhs.hit,
-                    rhs.hit_index.map_or_else(|| "None".to_string(), |v| v.to_string()),
+                    rhs.hit_index
+                        .map_or_else(|| "None".to_string(), |v| v.to_string()),
                     case.shots[index].x,
                     case.shots[index].y
                 ));
@@ -418,10 +422,7 @@ mod parity_edges {
     #[test]
     fn radius_boundary_is_inclusive() {
         let mut field = TargetField::new(1470.0, 956.0, 1, TargetFieldParameters::default());
-        field.place(
-            0,
-            AimTarget::new(AimPoint::new(100.0, 100.0), 40.0),
-        );
+        field.place(0, AimTarget::new(AimPoint::new(100.0, 100.0), 40.0));
         assert_eq!(field.hit_test(AimPoint::new(120.0, 100.0)), Some(0));
         assert_eq!(field.hit_test(AimPoint::new(120.000001, 100.0)), None);
         assert_eq!(field.hit_test(AimPoint::new(80.0, 100.0)), Some(0));

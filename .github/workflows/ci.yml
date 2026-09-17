@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Swift tests
+        run: swift test
+      - name: Package macOS app
+        run: ./scripts/package.sh
+      - name: Verify macOS signature
+        run: codesign --verify --deep --strict dist/AgentAim.app
+
+  rust:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rust format
+        working-directory: port
+        run: cargo fmt --all --check
+      - name: Rust tests
+        working-directory: port
+        run: cargo test --workspace
+      - name: Build Windows release executable
+        if: runner.os == 'Windows'
+        working-directory: port
+        run: cargo build --release -p agentaim-windows

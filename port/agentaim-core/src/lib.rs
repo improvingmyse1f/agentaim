@@ -21,11 +21,15 @@
 pub mod geometry;
 pub mod rng;
 pub mod score;
+pub mod sensitivity;
 pub mod target_field;
 
 pub use geometry::{AimPoint, AimTarget, TargetSnapshot};
 pub use rng::SplitMix64;
 pub use score::ScoreBoard;
+pub use sensitivity::{
+    AimAngles, DisplayMode, GameProfile, PerspectiveProjection, ProjectedPoint, Sensitivity,
+};
 pub use target_field::{TargetField, TargetFieldParameters};
 
 /// `fixtures/gameplay-v1.json` 的版本号。

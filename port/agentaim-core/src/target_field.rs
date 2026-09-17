@@ -94,7 +94,10 @@ impl TargetField {
     /// 这是**唯一**的直径公式，`make_diameter` 只是给它喂一个随机比例。
     /// 独立出来是为了让「导出预览图」「打印尺寸区间」这些地方不用重抄一遍算式。
     pub fn diameter(&self, base_ratio: f64) -> f64 {
-        self.screen_width * base_ratio * self.parameters.area_factor.sqrt() * self.parameters.target_scale
+        self.screen_width
+            * base_ratio
+            * self.parameters.area_factor.sqrt()
+            * self.parameters.target_scale
     }
 
     pub fn make_diameter(&self, rng: &mut SplitMix64) -> f64 {
