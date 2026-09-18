@@ -32,8 +32,9 @@ jobs:
       - name: Test and package macOS
         run: |
           swift test
-          ./scripts/package.sh
           version="${GITHUB_REF_NAME#v}"
+          marketing_version="${version%%-*}"
+          AGENTAIM_VERSION="$marketing_version" AGENTAIM_BUILD_NUMBER="$GITHUB_RUN_NUMBER" ./scripts/package.sh
           ditto -c -k --sequesterRsrc --keepParent dist/AgentAim.app "dist/AgentAim-macOS-$version.zip"
           shasum -a 256 "dist/AgentAim-macOS-$version.zip" | sed 's#dist/##' > "dist/AgentAim-macOS-$version.zip.sha256"
       - uses: actions/upload-artifact@v7
@@ -48,18 +49,33 @@ jobs:
     needs: [windows, macos]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v7
       - uses: actions/download-artifact@v7
         with:
           pattern: "*-release"
           path: release
           merge-multiple: true
-      - name: Publish unsigned preview release
+      - name: Verify release channel
+        run: |
+          channel="stable"
+          if [[ "$GITHUB_REF_NAME" == *-* ]]; then
+            channel="preview"
+          fi
+          test -f "release-channels/$channel"
+          test "$(tr -d '\r\n' < "release-channels/$channel")" = "$GITHUB_REF_NAME"
+      - name: Publish unsigned release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          prerelease_flag=()
+          release_note="Unsigned release build. Windows may show SmartScreen and macOS may show Gatekeeper warnings. Verify the attached SHA-256 files before installation."
+          if [[ "$GITHUB_REF_NAME" == *-* ]]; then
+            prerelease_flag+=(--prerelease)
+            release_note="Unsigned preview build. Windows may show SmartScreen and macOS may show Gatekeeper warnings. Verify the attached SHA-256 files before installation."
+          fi
           gh release create "$GITHUB_REF_NAME" release/* \
             --repo "$GITHUB_REPOSITORY" \
             --title "AgentAim $GITHUB_REF_NAME" \
             --generate-notes \
-            --prerelease \
-            --notes "Unsigned preview build. Windows may show SmartScreen and macOS may show Gatekeeper warnings. Verify the attached SHA-256 files before installation."
+            "${prerelease_flag[@]}" \
+            --notes "$release_note"

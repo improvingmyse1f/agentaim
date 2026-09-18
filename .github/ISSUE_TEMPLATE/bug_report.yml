@@ -1,0 +1,77 @@
+name: Bug report
+description: 报告可以稳定复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请不要粘贴 prompt、transcript、个人路径、凭据或其他隐私内容。
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options:
+        - macOS Apple Silicon
+        - macOS Intel
+        - Windows 10 x64
+        - Windows 11 x64
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: 系统版本
+      placeholder: 例如 macOS 15.6 或 Windows 11 24H2
+    validations:
+      required: true
+  - type: input
+    id: app_version
+    attributes:
+      label: AgentAim 版本
+      placeholder: 例如 v0.1.0-preview.1
+    validations:
+      required: true
+  - type: dropdown
+    id: install_method
+    attributes:
+      label: 安装方式
+      options:
+        - GitHub Release 手动安装
+        - Agent 安装脚本
+        - 从源码构建
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请提供最短、稳定的复现步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: textarea
+    id: recovery
+    attributes:
+      label: 退出与恢复情况
+      description: Esc、Q、右键、超时或 killall/任务管理器是否恢复鼠标？
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已移除日志和截图中的 prompt、transcript、个人路径与凭据。
+          required: true

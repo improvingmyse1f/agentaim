@@ -1,9 +1,42 @@
-# AgentAim
+<p align="center">
+  <img src="Design/agentaim-app-icon-v2.png" width="128" alt="AgentAim 图标">
+</p>
 
-Agent 运行等待期间使用的轻量化瞄准小游戏。当前提供 macOS 13+ 与 Windows 10 22H2 /
-Windows 11 x64 两套原生外壳，靶位、命中、计分、随机数和灵敏度投影由跨端测试合同约束。
+<h1 align="center">AgentAim</h1>
 
-## 当前原型
+<p align="center"><strong>把等待 AI coding agent 的时间，变成随时可退出的瞄准训练。</strong></p>
+
+<p align="center">
+  简体中文 · <a href="README.en.md">English</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/improvingmyse1f/agentaim/actions/workflows/ci.yml"><img src="https://github.com/improvingmyse1f/agentaim/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-black" alt="MIT License"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/improvingmyse1f/agentaim/releases">下载公开预览版</a> ·
+  <a href="https://github.com/improvingmyse1f/agentaim/issues/new/choose">反馈问题</a> ·
+  <a href="ROADMAP.md">查看路线图</a>
+</p>
+
+AgentAim 是一个开源、原生、轻量的桌面瞄准小游戏，用来填掉 Codex、Claude Code、
+WorkBuddy 等 Agent 工作时的等待。它不读取游戏画面，不控制其他游戏，也不是瞄准辅助或外挂。
+
+> [!NOTE]
+> 当前是公开预览版。macOS Release 仅支持 Apple Silicon（arm64），Windows Release 支持
+> Windows 10 22H2 / Windows 11 x64。两个平台的发布包都未进行商业代码签名。
+
+## 为什么是 AgentAim
+
+- **等待时可玩**：Agent 开始工作时可亮起确认圆环；只有悬停两秒才进入训练。
+- **退出有保障**：`Esc`、`Q`、右键均可退出，90 秒无操作自动收局。
+- **手感可对齐**：支持 VALORANT / CS2 灵敏度换算，可选 DPI 只用于显示 `cm/360`。
+- **默认不打扰**：自动开始与登录启动默认关闭，不需要辅助功能、输入监控或屏幕录制权限。
+- **跨端对表**：macOS 与 Windows 共享玩法向量，命中、计分和随机数顺序由测试锁定。
+
+## 当前功能
 
 - Gridshot 式训练，**一局没有时限** —— 什么时候结束由你决定（`Esc`），或者交给 Agent 状态
 - 从菜单点「开始训练」会直接开局；双击启动或 Agent 自动触发时，屏幕底部中央会出现确认圆环，
@@ -26,25 +59,66 @@ Agent 变成等待确认、已回复或失败时，自动安全收局并返回�
 
 ### macOS
 
-```bash
-./scripts/package.sh
-open dist/AgentAim.app
-```
+> [!IMPORTANT]
+> AgentAim 采用未签名的开源分发方式，没有 Apple Developer ID 签名或 Apple 公证。
+> macOS 会把从网络下载的副本交给 Gatekeeper 检查；请只从本仓库的
+> [GitHub Releases](https://github.com/improvingmyse1f/agentaim/releases) 下载，并核对发布页附带的
+> SHA-256。项目不要求辅助功能、输入监控或屏幕录制权限。
 
-产物是 **ad-hoc 签名**（`codesign --force --sign -`），不是开发者签名，所以从网络下载得到的
-副本会被 Gatekeeper 拦下。放行方式：右键 → 打开，或者
+#### 普通用户安装
 
-```bash
-xattr -dr com.apple.quarantine /Applications/AgentAim.app
-```
+1. 打开 [GitHub Releases](https://github.com/improvingmyse1f/agentaim/releases)，下载最新的
+   `AgentAim-macOS-<版本>.zip`。
+2. 双击解压，把 `AgentAim.app` 拖进「应用程序」文件夹。
+3. 双击 `AgentAim`。第一次打开时，macOS 会提示无法验证开发者，这是未签名版本的预期行为。
+4. 如果应用被拦截，打开「系统设置」→「隐私与安全性」，滚动到「安全性」，点击
+   「仍要打开」，输入登录密码并再次确认。新版 macOS 已不能依靠右键打开绕过这一步。
+5. 回到「应用程序」再次打开 `AgentAim`。系统记住这次选择后，以后可以正常双击启动。
 
-让 agent 帮忙安装的话，把 [`AGENTS.md`](AGENTS.md) 交给它即可 —— 里面有安装步骤和
-一份可以直接念给用户听的用法说明。
+安装过程不需要终端，也不需要授予额外系统权限。启动后应用会出现在 Dock 和
+`⌘ Command + Tab`；训练不会自己开始。桌面左上角 `AgentAim` →「开始训练」可以直接开局。
 
-发布版也可以安装到当前用户的 `~/Applications`：
+#### 让 Agent 安装
+
+只有当用户已经明确同意安装这个**未经 Apple 签名和公证**的版本时，Agent 才能运行：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/improvingmyse1f/agentaim/main/scripts/install.sh | zsh
+```
+
+安装脚本会下载最新 GitHub Release、核对附带的 SHA-256、安装到
+`~/Applications/AgentAim.app`、清除该应用的 quarantine 标记并启动。它默认不使用 `sudo`，
+不会安装 hooks，也不会修改 Codex、Claude Code 或 WorkBuddy 的配置。更新时会先保留旧版本；
+新版本复制或启动请求失败时会自动恢复。
+
+默认安装 `preview` 频道，也可以显式指定版本：
+
+```bash
+./scripts/install.sh v0.1.0-preview.1
+```
+
+Agent 不应只根据脚本退出码声称安装成功；至少确认应用文件存在，并实际请求 macOS 启动它：
+
+```bash
+test -x "$HOME/Applications/AgentAim.app/Contents/MacOS/AgentAim"
+open "$HOME/Applications/AgentAim.app"
+```
+
+安装完成后，Agent 必须告诉用户以下两条出口：
+
+- 玩的时候按 `Esc`，会立即结束训练并恢复鼠标；`Q` 和右键也可以。
+- 万一鼠标真的不动了，在终端执行 `killall AgentAim`。
+
+Agent 状态感知 hooks 是可选功能，必须在应用安装完成后单独询问用户，不能默认写入配置。
+详细的安装与交付约束见 [`AGENTS.md`](AGENTS.md)。
+
+#### 从源码构建
+
+已经克隆仓库的开发者可以在本机打包并启动：
+
+```bash
+./scripts/package.sh
+open dist/AgentAim.app
 ```
 
 ### Windows 10 / 11 x64
@@ -59,9 +133,8 @@ Windows 版安装到 `%LOCALAPPDATA%\AgentAim`，不需要管理员权限。启�
 的 AgentAim 图标；开始训练后同样用 `Esc`、`Q` 或鼠标右键退出。完整说明见
 [`WINDOWS.md`](WINDOWS.md)。
 
-> 当前 GitHub Release 是未签名预览版：Windows 可能显示 SmartScreen，macOS 可能显示
-> Gatekeeper 提示。发布包附带独立 SHA-256 文件；在证书签名与双平台真机验收完成前，
-> 不把它称为正式签名版本。
+> GitHub Release 采用未签名的开源分发方式：Windows 可能显示 SmartScreen，macOS 会显示
+> Gatekeeper 提示。发布包附带独立 SHA-256 文件，不把它称为 Apple 或 Microsoft 签名版本。
 
 ### 启动之后会发生什么
 

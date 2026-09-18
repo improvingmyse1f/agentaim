@@ -17,21 +17,38 @@
 
 ## 2. 安装
 
+### 从 GitHub Release 安装
+
+只有当用户已经明确同意安装未经 Apple 签名和公证的版本时，才运行：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/improvingmyse1f/agentaim/main/scripts/install.sh | zsh
+```
+
+脚本下载最新 Release、校验附带的 SHA-256、安装到 `~/Applications/AgentAim.app`、
+清除这个应用的 quarantine 标记并启动。不要用 `sudo`，也不要顺手安装 hooks。
+
+### 从源码安装
+
 ```bash
 cd <repo>
 ./scripts/package.sh
-cp -R dist/AgentAim.app /Applications/     # 或用户指定的位置
+mkdir -p "$HOME/Applications"
+ditto dist/AgentAim.app "$HOME/Applications/AgentAim.app"
+open "$HOME/Applications/AgentAim.app"
 ```
 
-产物是 ad-hoc 签名（不是开发者签名），所以如果是从网络下载的副本，Gatekeeper 会拦下它。
-要么让用户右键 →「打开」，要么直接：
+产物是 ad-hoc 签名，不是开发者签名。如果用户选择手动下载并安装，第一次启动被 Gatekeeper
+拦截后，应引导用户到「系统设置」→「隐私与安全性」→「仍要打开」。macOS Sequoia 及以后
+不能再依靠右键打开绕过。**不需要授予任何权限** —— 不用辅助功能、不用输入监控、
+不用屏幕录制；如果系统弹出这些授权窗口，说明装错了东西。
+
+安装完成不能只看脚本退出码。至少确认应用文件存在，并实际请求 macOS 启动：
 
 ```bash
-xattr -dr com.apple.quarantine /Applications/AgentAim.app
+test -x "$HOME/Applications/AgentAim.app/Contents/MacOS/AgentAim"
+open "$HOME/Applications/AgentAim.app"
 ```
-
-然后 `open /Applications/AgentAim.app`。**不需要授予任何权限** —— 不用辅助功能，
-不用输入监控，不用屏幕录制。如果系统弹权限窗口，说明装错了东西。
 
 ## 3. 念给用户听（这一节是重点）
 

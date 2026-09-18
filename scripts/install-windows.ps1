@@ -10,25 +10,29 @@ $Repository = "improvingmyse1f/agentaim"
 $Headers = @{ "User-Agent" = "AgentAim-Installer" }
 
 if ($Version -eq "latest") {
-    $Releases = Invoke-RestMethod -Headers $Headers "https://api.github.com/repos/$Repository/releases?per_page=10"
-    $Release = $Releases | Select-Object -First 1
-    if (-not $Release) { throw "The repository does not have a published release yet." }
-    $Version = $Release.tag_name
-} else {
-    $Release = Invoke-RestMethod -Headers $Headers "https://api.github.com/repos/$Repository/releases/tags/$Version"
+    $Version = "preview"
+}
+if ($Version -eq "preview" -or $Version -eq "stable") {
+    $ChannelUrl = "https://raw.githubusercontent.com/$Repository/main/release-channels/$Version"
+    $Version = (Invoke-WebRequest -Headers $Headers -Uri $ChannelUrl).Content.Trim()
+}
+if (-not $Version.StartsWith("v")) { $Version = "v$Version" }
+if ($Version -notmatch '^v[0-9]+\.[0-9]+\.[0-9]+([.-][0-9A-Za-z.-]+)?$') {
+    throw "Invalid release version: $Version"
 }
 
-$ZipAsset = $Release.assets | Where-Object { $_.name -match '^AgentAim-Windows-x64-.*\.zip$' } | Select-Object -First 1
-$HashAsset = $Release.assets | Where-Object { $_.name -eq ($ZipAsset.name + '.sha256') } | Select-Object -First 1
-if (-not $ZipAsset -or -not $HashAsset) { throw "Release $Version does not contain a Windows x64 package and checksum." }
+$AssetVersion = $Version.Substring(1)
+$ZipName = "AgentAim-Windows-x64-$AssetVersion.zip"
+$ZipUrl = "https://github.com/$Repository/releases/download/$Version/$ZipName"
+$HashUrl = "$ZipUrl.sha256"
 
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ("AgentAim-" + [guid]::NewGuid())
 New-Item -ItemType Directory $TempDir | Out-Null
 try {
-    $ZipPath = Join-Path $TempDir $ZipAsset.name
+    $ZipPath = Join-Path $TempDir $ZipName
     $HashPath = "$ZipPath.sha256"
-    Invoke-WebRequest -Headers $Headers -Uri $ZipAsset.browser_download_url -OutFile $ZipPath
-    Invoke-WebRequest -Headers $Headers -Uri $HashAsset.browser_download_url -OutFile $HashPath
+    Invoke-WebRequest -Headers $Headers -Uri $ZipUrl -OutFile $ZipPath
+    Invoke-WebRequest -Headers $Headers -Uri $HashUrl -OutFile $HashPath
     $Expected = ((Get-Content $HashPath -Raw).Trim() -split '\s+')[0].ToLowerInvariant()
     $Actual = (Get-FileHash -Algorithm SHA256 $ZipPath).Hash.ToLowerInvariant()
     if ($Actual -ne $Expected) { throw "SHA-256 verification failed. Expected $Expected, got $Actual." }
