@@ -21,6 +21,10 @@
   <a href="ROADMAP.md">Roadmap</a>
 </p>
 
+<p align="center">
+  <img src="Design/agentaim-social-preview.png" width="960" alt="AgentAim turns AI coding wait time into aim practice">
+</p>
+
 AgentAim is an open-source, native desktop aim trainer for the moments when Codex, Claude Code,
 WorkBuddy, or another coding agent is working. It does not inspect game windows, control a game,
 or provide aim assistance.
@@ -29,6 +33,16 @@ or provide aim assistance.
 > This is a public preview. The macOS release currently supports Apple Silicon only. The Windows
 > release supports Windows 10 22H2 and Windows 11 x64. Release binaries are not commercially
 > code-signed, so macOS Gatekeeper or Windows SmartScreen may show a warning.
+
+## See it in 30 seconds
+
+`Agent starts working` → `confirmation ring appears` → `hover for 2 seconds` → `practice over your desktop` → `Esc exits immediately`
+
+<p align="center">
+  <img src="Design/agentaim-gameplay-assets-preview.png" width="680" alt="AgentAim production-rendered targets and crosshair">
+</p>
+
+<p align="center"><sub>These targets and the crosshair are exported directly from the production drawing code. The actual trainer uses a transparent overlay; it does not replace your desktop with a black background.</sub></p>
 
 ## Why AgentAim
 

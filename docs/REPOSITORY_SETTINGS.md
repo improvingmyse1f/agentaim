@@ -6,32 +6,41 @@
 
 **Description**
 
-> Open-source aim practice for the moments while Codex, Claude Code, or WorkBuddy is working.
+> Native aim training during AI coding wait time. Open source for macOS and Windows.
 
 **Topics**
 
 ```text
 aim-trainer
+aim-training
 ai-coding-agent
+ai-agents
 macos
 windows
 swift
 rust
 codex
 claude-code
-workbuddy
 valorant
-counter-strike
+counter-strike-2
 open-source
 ```
+
+**Homepage**
+
+暂时留空。没有独立产品页时，不要重复填写仓库地址或 Release 地址。
+
+**Social preview**
+
+上传 [`Design/agentaim-social-preview.png`](../Design/agentaim-social-preview.png)，尺寸为 1280×640。
 
 ## 建议开关
 
 - 保持 Issues 开启
 - 开启 Discussions，用于安装帮助、体验反馈和玩法讨论
 - 开启 Private vulnerability reporting
-- 准备产品页后填写 Homepage
-- 上传 1280×640 社交分享图，画面只保留图标、产品名和一句话价值
+- 准备独立产品页后再填写 Homepage
+- 使用仓库内已准备的 1280×640 社交分享图
 
 ## 发布前检查
 

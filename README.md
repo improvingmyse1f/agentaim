@@ -21,12 +21,26 @@
   <a href="ROADMAP.md">查看路线图</a>
 </p>
 
+<p align="center">
+  <img src="Design/agentaim-social-preview.png" width="960" alt="AgentAim：把等待 AI coding agent 的时间变成瞄准训练">
+</p>
+
 AgentAim 是一个开源、原生、轻量的桌面瞄准小游戏，用来填掉 Codex、Claude Code、
 WorkBuddy 等 Agent 工作时的等待。它不读取游戏画面，不控制其他游戏，也不是瞄准辅助或外挂。
 
 > [!NOTE]
 > 当前是公开预览版。macOS Release 仅支持 Apple Silicon（arm64），Windows Release 支持
 > Windows 10 22H2 / Windows 11 x64。两个平台的发布包都未进行商业代码签名。
+
+## 30 秒看懂
+
+`Agent 开始工作` → `底部圆环亮起` → `鼠标悬停 2 秒` → `直接在当前桌面上练枪` → `Esc 立即退出`
+
+<p align="center">
+  <img src="Design/agentaim-gameplay-assets-preview.png" width="680" alt="AgentAim 实际靶子与准星绘制效果">
+</p>
+
+<p align="center"><sub>靶子与准星由应用的生产绘制代码直接导出；实际训练使用透明覆盖层，不会把桌面换成黑色背景。</sub></p>
 
 ## 为什么是 AgentAim
 
